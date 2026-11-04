@@ -8,6 +8,7 @@
 body {
     background-color: #233d4d;
     color: #fe712d;
+    font-family: "Science Gothic", sans-serif;
 }
 
 .wrapper {
@@ -15,4 +16,27 @@ body {
     place-items: center;
     min-height: 100vh;
     text-align: center;
+}
+
+p::after {
+    content: ".";
+    display: inline-block;
+    animation: dots 1.5s steps(3, end) infinite;
+    width: 1em;
+    text-align: left;
+}
+
+@keyframes dots {
+    0% {
+        content: " ";
+    }
+    25% {
+        content: ".";
+    }
+    50% {
+        content: "..";
+    }
+    75% {
+        content: "...";
+    }
 }
